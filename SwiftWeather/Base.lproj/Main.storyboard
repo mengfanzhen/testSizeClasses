@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftWeather" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,81 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M9j-KE-bU2">
+                                <rect key="frame" x="0.0" y="180" width="600" height="240"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="吃饭" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TtE-R7-iej">
+                                        <rect key="frame" x="283" y="32" width="34" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="打豆" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ndu-jL-xNR">
+                                        <rect key="frame" x="260" y="149" width="34" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="睡觉" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgl-P7-ude">
+                                        <rect key="frame" x="283" y="86" width="34" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.11009567511849416" green="1" blue="0.44323998922101693" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="TtE-R7-iej" firstAttribute="top" secondItem="M9j-KE-bU2" secondAttribute="top" constant="32" id="3S4-Jb-dO8"/>
+                                    <constraint firstItem="Ndu-jL-xNR" firstAttribute="centerX" secondItem="M9j-KE-bU2" secondAttribute="centerX" id="6q6-Nz-Tq7"/>
+                                    <constraint firstAttribute="width" constant="320" id="8GG-cB-Wbe"/>
+                                    <constraint firstItem="Ndu-jL-xNR" firstAttribute="top" secondItem="sgl-P7-ude" secondAttribute="bottom" constant="42" id="Ces-vd-265"/>
+                                    <constraint firstItem="TtE-R7-iej" firstAttribute="centerX" secondItem="M9j-KE-bU2" secondAttribute="centerX" id="fdL-Vd-WdV"/>
+                                    <constraint firstAttribute="height" constant="240" id="jeh-qA-IV8"/>
+                                    <constraint firstItem="sgl-P7-ude" firstAttribute="top" secondItem="TtE-R7-iej" secondAttribute="bottom" constant="33" id="kn2-U1-rCf"/>
+                                    <constraint firstItem="sgl-P7-ude" firstAttribute="centerX" secondItem="M9j-KE-bU2" secondAttribute="centerX" id="xXn-LO-Ois"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="Ndu-jL-xNR"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="8GG-cB-Wbe"/>
+                                        <exclude reference="6q6-Nz-Tq7"/>
+                                        <exclude reference="Ces-vd-265"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="20" y="20" width="360" height="580"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="subviews">
+                                        <include reference="Ndu-jL-xNR"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="8GG-cB-Wbe"/>
+                                        <include reference="6q6-Nz-Tq7"/>
+                                        <include reference="Ces-vd-265"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="M9j-KE-bU2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LVs-vV-B1f"/>
+                            <constraint firstItem="M9j-KE-bU2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="160" id="cXE-iL-qIV"/>
+                            <constraint firstItem="M9j-KE-bU2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sWL-OF-3Nx"/>
+                        </constraints>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="sWL-OF-3Nx"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="244" y="298"/>
         </scene>
     </scenes>
 </document>
